@@ -1,0 +1,26 @@
+- Create directory structure
+-Create yarn and install all dependencies
+   --dependencies
+       --express
+       --ejs layout
+   -- Dev dependencies
+       --nodemon
+-Create Express server - Create a app.js file
+-Git setup and first commit
+-Install Laravel Mix
+    -Setup JS and CSS
+-Install tailwind CSS
+-Create Home page using HTML and CSS
+    --Include tailwind CSS
+-Create Cart page
+    --Order summary section
+    --empty cart section
+-Create Order Controller and link it in app.js
+-Create Orders view with table for customer and admin
+-Create orders single page with status
+-Create login page with route
+-Create register page with route
+-Build register crud
+     -- dependencies express-flash-express-session-cookie-parser-dotenv
+     --status code 
+     --Database connecction, dependencies mongoose
