@@ -1,0 +1,40 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+}
+
+.coffee-img {
+  height: 100px;
+  width: 150px;
+  margin-top: -0.1rem;
+}
+
+nav li:last-child a {
+  background: #b95604;
+}
+nav li:last-child a:hover {
+  background: #97652b;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #b95604;
+}
+
+section.hero {
+  background: #F8F8F8;
+}
+
+.add-to-cart {
+  border: 2px solid #b95604;
+  color: #b95604;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background: #b95604;
+  border-color: #fff;
+  color: #fff;
+}
