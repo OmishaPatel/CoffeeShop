@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop Website</title>
+    <title>Coffee Shop</title>
     <link href="https://unpkg.com/tailwindcss@^1/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
 </head>
 <body>
@@ -24,7 +25,7 @@
                 </a></li>
                 <li class="ml-6"><a href="/register">Register</a></li>
                 <li class="ml-6"><a href="/login">Login</a></li>
-                <li class="ml-6"><a href="#" class="inline-block px-4 py-2 rounded-full"><img src="/img/cart.png" alt=""></a></li>
+                <li class="ml-6"><a href="/cart" class="inline-block px-4 py-2 rounded-full flex items-center"><span id="cart-counter" class="text-white font-bold pr-2"><%= session.cart ? session.cart.totalQty : '' %></span><img src="/img/cart.png" alt=""></a></li>
             </ul>
     
         </div>

@@ -1,0 +1,44 @@
+[{
+    "_id": {
+      "$oid": "5eee651f739f8c674fd736ee"
+    },
+    "name": "Latte",
+    "image": "coffee-card.jpg",
+    "price": "5" 
+  },{
+    "_id": {
+      "$oid": "5eee6671a27a66807cf2bea3"
+    },
+    "name": "Cappucino",
+    "image": "coffee-card.jpg",
+    "price": "6" 
+  },{
+    "_id": {
+      "$oid": "5eee6692a27a66807cf2bea4"
+    },
+    "name": "Americano",
+    "image": "coffee-card.jpg",
+    "price": "4"
+  },{
+    "_id": {
+      "$oid": "5eee66a5a27a66807cf2bea5"
+    },
+    "name": "Mocha",
+    "image": "coffee-card.jpg",
+    "price": "5"
+  },{
+    "_id": {
+      "$oid": "5eee66c4a27a66807cf2bea6"
+    },
+    "name": "Dopio",
+    "image": "coffee-card.jpg",
+    "price": "5"
+  },{
+    "_id": {
+      "$oid": "5eee66cfa27a66807cf2bea7"
+    },
+    "name": "Macchiato",
+    "image": "coffee-card.jpg",
+    "price": "7"
+  }]
+    
