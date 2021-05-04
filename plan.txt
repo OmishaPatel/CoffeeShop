@@ -36,3 +36,11 @@
 -Create Order Controller and link it in app.js
 -Create Orders view with table for customer and admin
 -Create orders single page with status
+-Place order functionality
+-Show all orders on customer order page
+-Show orders on admin orders page
+-Order tracker
+    -dependencies moment
+-Socket connection
+    -dependencies socket.io
+-Build project for deployment
