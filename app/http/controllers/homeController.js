@@ -4,12 +4,7 @@ function homeController(){
         async index(req, res) {
             const coffees = await Menu.find()
             return res.render('home', {coffees: coffees}) 
-            // }
 
-            // Menu.find().then(function(coffee){
-            //     console.log(coffee)
-            //     return res.render('home', {coffee: coffee}) 
-            // })
         }
     }
 }
