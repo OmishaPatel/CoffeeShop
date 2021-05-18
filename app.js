@@ -13,8 +13,7 @@ const passport = require('passport')
 const Emitter = require('events')
 
 //Database connection
-const url = "mongodb+srv://admin:iTCn5lfkJVVeS2B3@cluster0.kcw0y.mongodb.net/coffee?retryWrites=true&w=majority";
-mongoose.connect(url, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log('Database connected...');
@@ -62,6 +61,10 @@ app.set('view engine', 'ejs')
 
 // Routes
 require('./routes/web')(app)
+// Middleware for url not found
+app.use((req,res) => {
+    res.status(404).render('errors/404')
+})
 
 const server = app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`)

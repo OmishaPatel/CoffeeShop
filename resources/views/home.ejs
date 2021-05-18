@@ -2,11 +2,11 @@
   <div class="container mx-auto flex items-center justify-between">
     <div class="w-1/2">
       <h6 class="text-lg"><em>Need Some Energy?</em></h6>
-      <h1 class="text-5xl font-bold">Start your day with Coffee</h1>
-      <button
+      <h1 class="text-3xl md:text-6xl font-bold">Start your day with Coffee</h1>
+      <a href="#menu"><button
         class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">
         Order Now
-      </button>
+      </button></a>
     </div>
     <div class="w-1/2 coffee-hero-img">
       <img src="/img/coffee-hero.jpg" alt="" />
@@ -15,9 +15,9 @@
 </section>
 <section id="menu" class="menu container mx-auto py-8">
   <h1 class="text-xl font-bold mb-8"></h1>
-  <div class="grid grid-cols-3 col-gap-12 row-gap-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-gap-12 row-gap-16">
     <% coffees.forEach(function(coffee){%>
-      <div class="w-72">
+      <div class="w-full md:w-72">
         <img class="h-40 mb-4 mx-auto" src="/img/<%= coffee.image%>" alt="" />
         <div class="text-center">
           <h2 class="mb-4 text-3xl"><%= coffee.name%></h2>

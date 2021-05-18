@@ -8,7 +8,6 @@ let cartCounter = document.getElementById('cart-counter')
 function updateCart(coffee){
     //axios call
     axios.post('/update-cart', coffee).then(res =>{
-        console.log(res)
         cartCounter.innerText = res.data.totalQty
         new Noty({
             type: 'success',
@@ -47,7 +46,7 @@ let status = document.querySelectorAll('.status-line')
 let hiddenInput = document.querySelector('#hiddenInput')
 let order = hiddenInput ? document.querySelector('#hiddenInput').value : null
 order = JSON.parse(order)
-console.log(order)
+
 let time = document.createElement('small')
 
 function updateStatus(order) {
@@ -76,7 +75,8 @@ function updateStatus(order) {
 updateStatus(order);
 // Socket 
 let socket = io()
-initAdmin(socket)
+
+
 // Join
 if(order){
     socket.emit('join', `order_${order._id}`)
@@ -84,6 +84,7 @@ if(order){
 
 let adminArea = window.location.pathname
 if(adminArea.includes('admin')) {
+    initAdmin(socket)
     socket.emit('join','adminRoom')
 }
 
