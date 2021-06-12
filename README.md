@@ -6,7 +6,7 @@ This website can serve as a prototype for small businesses for real-time product
 
 [CoffeeShop](https://killiman.xyz)
 
-#Technologies Used:
+# Technologies Used:
 * Node.js
 * Express
 * MongoDB with Moongose
@@ -17,6 +17,9 @@ This website can serve as a prototype for small businesses for real-time product
 * NGINX
 * AWS
 
+# Installation
+* To run this project first clone it then install modules using `yarn install`
+* Change the `env.example` file to `.env` and specify your secret for COOKIE SECRET and url for MONOGDB connection.
 # Demo:
 ![Order Demonstration](coffee.gif)
 
