@@ -17,6 +17,10 @@ This website can serve as a prototype for small businesses for real-time product
 * NGINX
 * AWS
 
+# Working On
+
+* Currently working on adding integration of payment to the website.
+
 # Installation
 * To run this project first clone it then install modules using `yarn install`
 * Change the `env.example` file to `.env` and specify your secret for COOKIE SECRET and url for MONOGDB connection.

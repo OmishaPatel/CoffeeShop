@@ -14,6 +14,9 @@
                 </div>
                 <span class="flex-1"><%= coffee.qty %></span>
                 <span class="font-bold text-lg">US $ <%= coffee.item.price * coffee.qty %></span>
+                <button data-id = "<%= JSON.stringify(coffee.item) %>" class="delete-button ml-10"><span>➖</span></button>
+                <button data-id = "<%= JSON.stringify(coffee.item) %>" class="add-button ml-10"><span>➕</span></button>
+                
             </div>
             <% }%>
         </div>
@@ -21,7 +24,7 @@
         <div class="text-right py-4">
             <div>
                 <span class ="text-lg font-bold">Total Amount:</span>
-                <span class="amount text-2xl font-bold ml-2">US $ <%= session.cart.totalPrice%></span>
+                <span class="amount text-2xl font-bold ml-2" id="total-counter">US $ <%= session.cart.totalPrice%></span>
             </div>
             <% if(user) { %>
             <div>

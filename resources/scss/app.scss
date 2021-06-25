@@ -27,7 +27,8 @@ nav li a {
 section.hero {
     background: $secondary;
 }
-.add-to-cart {
+.add-to-cart,
+.delete-to-cart {
     border:2px solid $primary;
     color:$primary;
     transition: $smooth;
