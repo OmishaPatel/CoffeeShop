@@ -11,6 +11,7 @@ let totalCounter = document.getElementById('total-counter')
 const options = {
     headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin' : '*'
     }
   };
 function updateCart(coffee){
@@ -37,11 +38,12 @@ function updateCart(coffee){
 addTOCart.forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
     let coffee = JSON.parse(btn.dataset.coffee)
+    console.log(coffee)
     updateCart(coffee)
     })
 })
 function removeItems(item) {
-    axios.post('/delete-cart',item, options).then(res =>{
+    axios.post('/delete-cart',item,options).then(res =>{
         cartCounter.innerText = res.data.totalQty//totalCounter.innerText = res.data.totalPrice
         new Noty({
             type: 'success',
