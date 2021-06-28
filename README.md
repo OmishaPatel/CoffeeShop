@@ -17,9 +17,7 @@ This website can serve as a prototype for small businesses for real-time product
 * NGINX
 * AWS
 
-# Working On
 
-* Adding and removing items in cart works on localhost. These two features doesn't work in production. Currently working on adding integration of payment to the website.
 
 # Installation
 * To run this project first clone it then install modules using `yarn install`
