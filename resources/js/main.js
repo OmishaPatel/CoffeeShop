@@ -8,11 +8,7 @@ let cartCounter = document.getElementById('cart-counter')
 let removeCart = document.querySelectorAll('.delete-button')
 let addItemToCart = document.querySelectorAll('.add-button')
 let totalCounter = document.getElementById('total-counter')
-const options = {
-    headers: {
-        'Content-Type': 'application/json',
-    }
-  };
+
 function updateCart(coffee){
     //axios call
     axios.post('/update-cart', coffee).then(res =>{
@@ -41,7 +37,7 @@ addTOCart.forEach((btn)=>{
     })
 })
 function removeItems(item) {
-    axios.post('/delete-cart',item, options).then(res =>{
+    axios.post('/delete-cart',item).then(res =>{
         cartCounter.innerText = res.data.totalQty//totalCounter.innerText = res.data.totalPrice
         new Noty({
             type: 'success',
@@ -69,7 +65,7 @@ removeCart.forEach((btn) => {
         })
     })
 function addItem(item) {
-    axios.post('/add-cart', item, options).then(res =>{
+    axios.post('/add-cart', item).then(res =>{
         cartCounter.innerText = res.data.totalQty
         new Noty({
             type: 'success',
