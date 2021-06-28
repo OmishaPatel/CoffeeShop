@@ -40,12 +40,12 @@ function cartController(){
               } else {
                 cart.items[req.body._id].qty = cart.items[req.body._id].qty - 1;
               }
-              if (cart.totalQty === 0) {
+            }
+            else if (cart.totalQty === 0) {
                 delete req.session.cart;
               }
-            }
             let totalQty = cart ? cart.totalQty : 0;
-            return res.json({ totalQty: totalQty, cartItems: cart.items, totalPrice: cart.totalPrice });
+            return res.json({ totalQty: req.session.cart.totalQty });
            
 
         }
