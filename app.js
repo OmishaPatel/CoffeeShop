@@ -61,6 +61,7 @@ app.set('view engine', 'ejs')
 
 // Routes
 require('./routes/web')(app)
+
 // Middleware for url not found
 app.use((req,res) => {
     res.status(404).render('errors/404')

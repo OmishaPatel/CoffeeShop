@@ -36,7 +36,7 @@ addTOCart.forEach((btn)=>{
     })
 })
 function removeItems(item) {
-    axios.post('/delete-cart',item).then(res =>{
+    axios.post('/cart/delete-cart',item).then(res =>{
         cartCounter.innerText = res.data.totalQty//totalCounter.innerText = res.data.totalPrice
         new Noty({
             type: 'success',
@@ -64,7 +64,7 @@ removeCart.forEach((btn) => {
         })
     })
 function addItem(item) {
-    axios.post('/add-cart', item).then(res =>{
+    axios.post('/cart/add-cart', item).then(res =>{
         cartCounter.innerText = res.data.totalQty
         new Noty({
             type: 'success',
