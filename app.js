@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3000
 const session = require('express-session')
 const flash = require('express-flash')
+const cors = require('cors')
 const MongoDbStore = require('connect-mongo')(session)
 const passport = require('passport')
 const Emitter = require('events')
@@ -46,6 +47,7 @@ app.use(passport.session())
 app.use(flash())
 //Load Assests
 app.use(express.static('public'))
+app.use(cors())
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 //Global middleware
@@ -58,14 +60,14 @@ app.use((req, res, next)=> {
 app.use(expressLayout)
 app.set('views', path.join(__dirname, '/resources/views'))
 app.set('view engine', 'ejs')
-
+// Middleware for url not found
+app.use((req,res) => {
+    res.status(404).render('errors/404')
+})
 // Routes
 require('./routes/web')(app)
 
-// // Middleware for url not found
-// app.use((req,res) => {
-//     res.status(404).render('errors/404')
-// })
+
 
 const server = app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`)
